@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+
+    @media (max-width: 640px) {
+        
+        #hero{
+            flex-direction: column;
+        }
+    }
