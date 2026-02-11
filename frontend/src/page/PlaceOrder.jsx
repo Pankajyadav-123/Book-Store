@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 
-import CartTotal from '../components/CartTotal'
+import CartTotal from '../components/cartTotal'
 import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
 import axios from 'axios'
