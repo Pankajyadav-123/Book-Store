@@ -1,16 +1,15 @@
 import React from 'react'
-import { useContext } from 'react'
+import { useContext, useState, useEffect, useRef } from 'react'
 import { ShopContext } from '../context/ShopContext'
-import { useState } from 'react'
-import { useEffect } from 'react'
 import bin_icon from '../assets/bin_icon.png'
 import CartTotal from '../components/cartTotal'
 
 const cart = () => {
-  const { Books, currency,  cartItems, updateQuantity,navigate } = useContext(ShopContext);
+  const { Books, currency, cartItems, updateQuantity, navigate } = useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
+  const isInitialized = useRef(false);
 
-   useEffect(() => {
+  useEffect(() => {
     const tempData = []
     for (const items in cartItems) {
       if (cartItems[items] > 0) {
@@ -20,9 +19,14 @@ const cart = () => {
         })
       }
     }
-    console.log(tempData);
     setCartData(tempData)
-  }, [cartItems])
+    
+    // Only redirect after cart has been initialized and is empty
+    if (isInitialized.current && tempData.length === 0) {
+      navigate('/')
+    }
+    isInitialized.current = true
+  }, [cartItems, navigate])
 
 
     return (

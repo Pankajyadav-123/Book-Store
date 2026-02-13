@@ -1,6 +1,6 @@
 import React, { use, useEffect } from 'react'
 import { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
@@ -71,6 +71,7 @@ const ShopContextProvider = (props) => {
         
         if (quantity === 0) {
             delete cartData[itemId];
+           
         } else {
             cartData[itemId] = quantity;
         }
