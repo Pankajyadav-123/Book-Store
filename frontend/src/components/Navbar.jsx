@@ -30,7 +30,7 @@ export default function Navbar() {
     }, [visible]);
 
     return (
-        <div className='flex items-center justify-between py-5 font-medium relative z-[100] bg-white px-4 md:px-10'>
+        <div className='sticky top-0 z-[100] flex items-center justify-between py-5 font-medium bg-white px-4 md:px-10 shadow-sm'>
             
             <Link to='/'><img src={logo} alt="Logo" className='w-32' /></Link>
 

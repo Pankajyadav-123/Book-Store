@@ -33,6 +33,10 @@ const bookSchema = new mongoose.Schema({
         type:Boolean,
         default:false
     },
+    rating:{
+        type:Number,
+        default:0
+    },
     date:{
         type:Date,
         required:true,

@@ -185,6 +185,39 @@ const ShopContextProvider = (props) => {
         }
     }
 
+    const getReviews = async (bookId) => {
+        try {
+            const res = await axios.post(backendUrl + '/api/review/get', { bookId });
+            if (res.data.success) {
+                return res.data.reviews;
+            }
+            return [];
+        } catch (error) {
+            console.log(error);
+            return [];
+        }
+    }
+
+    const addReview = async (bookId, rating, reviewText) => {
+        try {
+            const res = await axios.post(backendUrl + '/api/review/add',
+                { bookId, rating, review: reviewText },
+                { headers: { token } }
+            );
+            if (res.data.success) {
+                toast.success('Review added successfully');
+                return true;
+            } else {
+                toast.error(res.data.message || 'Failed to add review');
+                return false;
+            }
+        } catch (error) {
+            console.log(error);
+            toast.error(error.message);
+            return false;
+        }
+    }
+
     useEffect(()=>{
         getBooksData();
     },[])
@@ -247,7 +280,9 @@ const ShopContextProvider = (props) => {
         search,
         setSearch,
         showSearch,
-        setShowSearch
+        setShowSearch,
+        getReviews,
+        addReview
     }
 
     return (

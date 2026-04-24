@@ -7,6 +7,7 @@ import userRouter from "./routes/userRoute.js";
 import bookRouter from "./routes/bookRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import reviewRouter from "./routes/reviewRoute.js";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use("/api/user", userRouter);
 app.use("/api/book",bookRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
+app.use("/api/review",reviewRouter)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
