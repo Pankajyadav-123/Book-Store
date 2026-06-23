@@ -10,15 +10,15 @@ const AboutPage = () => {
   return (
     <div className="bg-stone-50 min-h-screen text-stone-800">
       {/* Hero Section */}
-      <section className="py-20 bg-sepia-100 text-center px-4">
+      <section className="py-20 bg-sepia-100 text-center px-0">
         <h1 className="text-5xl font-serif mb-4">Our Story Starts Here</h1>
-        <p className="text-xl max-w-2xl mx-auto italic text-stone-600">
+        <p className="text-xl w-full italic text-stone-600">
           "A room without books is like a body without a soul."
         </p>
       </section>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <div className="w-full px-0 py-16 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl font-serif mb-6 border-b-2 border-amber-600 inline-block">
             Since 2026
@@ -45,8 +45,8 @@ const AboutPage = () => {
       </div>
 
       {/* Core Values */}
-      <section className="bg-stone-200 py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-stone-200 py-16 px-0">
+        <div className="w-full">
           <h3 className="text-center text-3xl font-serif mb-12">Why We Read</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((v, i) => (

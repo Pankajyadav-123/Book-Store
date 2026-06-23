@@ -83,7 +83,7 @@ const BookDetail = () => {
     }
 
     return (
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10'>
+        <div className='w-full px-0 py-10'>
             {/* Breadcrumb */}
             <nav className='text-sm text-gray-500 mb-6'>
                 <span>Home</span> / <span>Books</span> / <span className='text-emerald-600'>{bookData?.title}</span>
@@ -93,9 +93,9 @@ const BookDetail = () => {
             <div className='bg-white border border-gray-200 overflow-hidden'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-10'>
                     {/* Image Gallery */}
-                    <div className='space-y-4'>
+                    <div className='space-y-4 lg:max-w-[520px] lg:mx-auto'>
                         {/* Main Image */}
-                        <div className='relative overflow-hidden rounded-xl bg-gray-100 aspect-[3/4] group max-w-md mx-auto'>
+                        <div className='relative overflow-hidden rounded-xl bg-gray-100 aspect-[3/4] group w-full'>
                             {image ? (
                                 <img
                                     src={image}

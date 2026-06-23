@@ -16,8 +16,8 @@ const ContactPage = () => {
   );
 
   return (
-    <div className="bg-stone-50 min-h-screen py-10 md:py-20 px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className="bg-stone-50 min-h-screen py-10 md:py-20 px-0">
+      <div className="w-full">
         <div className="text-center mb-10 md:mb-16">
           <h1 className="text-3xl md:text-4xl font-serif mb-3 text-stone-900">Get in Touch</h1>
           <p className="text-stone-600 text-sm md:text-base">We usually respond within 24 hours.</p>

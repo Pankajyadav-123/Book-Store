@@ -15,7 +15,7 @@ const LatestColection = () => {
         <div className='my-10'>
             <div className='text-center py-8'>
                 <h2 className='text-3xl font-bold'>LATEST <span className='text-emerald-600'>BOOKS</span></h2>
-                <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+                <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>Discover our newest arrivals and stay up-to-date with the latest releases.</p>
             </div>
             {/* Rendering Books */}
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>

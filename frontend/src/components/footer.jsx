@@ -4,8 +4,8 @@ import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FDFCF8] py-12 px-6 my-5">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-[#FDFCF8] py-12 my-5 w-full">
+      <div className="w-full">
         {/* Main Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           
